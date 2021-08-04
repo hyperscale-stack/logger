@@ -18,7 +18,7 @@ clean:
 
 coverage.out: $(shell find . -type f -print | grep -v vendor | grep "\.go")
 	@go test -race -cover -coverprofile ./coverage.out.tmp ./...
-	@cat ./coverage.out.tmp | grep -v '.pb.go' | grep -v 'mock_' > ./coverage.out
+	@cat ./coverage.out.tmp | grep -v 'mock_' | grep -v 'nop.go' > ./coverage.out
 	@rm ./coverage.out.tmp
 
 test: coverage.out
