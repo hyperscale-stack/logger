@@ -2,4 +2,4 @@ module github.com/hyperscale-stack/logger
 
 go 1.15
 
-require github.com/stretchr/testify v1.11.1
+require github.com/stretchr/testify v1.12.1
